@@ -1,0 +1,176 @@
+.header__title{
+    text-align: center;;
+}
+
+.grid__continer{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 2rem;
+    justify-content: space-around;
+    margin-left: 3rem
+
+}
+
+
+  @media (min-width: 40rem){
+    .grid__continer{
+        grid-template-columns: repeat(3, 1fr) ;
+    }
+    .link-buy__item{
+        width: 120px;
+    }
+  }
+  @media (min-width: 60rem){
+    .grid__continer{
+        grid-template-columns: repeat(4, 1fr) ;
+    }
+    .link-buy__item{
+        width: 120px;
+    }
+  }
+
+    @media (min-width: 76rem){
+        .grid__continer{
+            grid-template-columns: repeat(7, 1fr) ;
+        }
+        .link-buy__item{
+            width: 120px;
+        }
+  }
+.grid__item{
+    width: 6rem;
+    height: 20rem;
+    border: 0.1 solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     align-items: center;
+     justify-content: space-between;
+     padding: 5px;
+     background: white;
+     box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.749);
+ 
+}
+.img__item{
+
+    background: url("packes/images/phon1.webp")  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    
+
+}
+
+.price__item{
+    font-weight: 1000;
+   
+
+}
+
+.link-buy__item{
+    color: rgba(252, 32, 32, 0.674) !important;
+    border-color: #D60202;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    width: 120px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* .description__item{
+    align-self: ;
+} */
+.side-market-chart{
+    background-color: white;
+    visibility: hidden;
+    z-index: 200;
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    width: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr;
+    grid-template-rows: 0.15fr 0.6fr 1fr;
+    /* grid-gap: 10px; */
+    grid-template-areas: ". . head"
+                        "selected selected selected"
+                        "summary summary summary";
+    transition: left 0.3s ease; 
+}
+body.side-market-chart-open{
+    overflow-y: hidden;
+}
+
+
+.side__header{
+    grid-area: head;
+    font-size: 1.5rem;;
+    /* align-self: flex-end; */
+    padding: 5px 20px 10px 0px;
+    width: 10rem;
+    font-weight: lighter;
+    position: relative;
+    top: 0.5rem;
+    left: 1rem;
+    
+}
+
+.side__selected-item{
+    grid-area:selected;
+    border-color: #6b6969;
+    border-style: solid;
+    border-width: 1px 0px;
+    padding: 10px 0px;
+    width: 18rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.chart-item__img{
+    background: url("packes/images/phon1.webp")  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 18rem;
+    height: 100px;
+    margin-top: 1rem;
+
+}
+.chart-item__description{
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+.summry__chart{
+    grid-area: summary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 55%;
+}
+
+.summry__chart > button {
+    background-color: rgba(255, 0, 0, 0.621);
+    height: 2rem;
+    width: 17rem;
+    color: white;
+
+}
+
+.summry__chart > .sum_price {
+
+    font-weight: 1000;
+}
+
+
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
