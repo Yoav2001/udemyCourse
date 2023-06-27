@@ -1,1 +1,0 @@
-const calculateSquare =require('../calculate-square')

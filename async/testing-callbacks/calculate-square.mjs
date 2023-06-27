@@ -3,8 +3,11 @@
 // if the type of the nuber not a numbr return error
 function calculateSquare(num, callback){
     setTimeout(function(){
-        if(typeof num=='number')
-            return callback(new Error("Arugment of type number is expected!     "))
+        if(typeof num!=='number'){
+             callback(new Error("Arugment of type number is expected"))
+             return;
+
+        }
 
         
             return callback(null,num*num)
@@ -12,8 +15,5 @@ function calculateSquare(num, callback){
     },1000)
 }
 
-calculateSquare("sdfdsf",function(context,err){
-    console.log();
-})
 
-module.export=calculateSquare
+export default calculateSquare
