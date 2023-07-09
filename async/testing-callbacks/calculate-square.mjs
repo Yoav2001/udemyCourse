@@ -7,9 +7,7 @@ function calculateSquare(num, callback){
              callback(new Error("Arugment of type number is expected"))
              return;
 
-        }
-
-        
+        } 
             return callback(null,num*num)
 
     },1000)
